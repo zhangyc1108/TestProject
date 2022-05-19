@@ -1,0 +1,9 @@
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\bin\Debug\netcoreapp3.1\Protocol.deps.json
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\bin\Debug\netcoreapp3.1\Protocol.dll
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\bin\Debug\netcoreapp3.1\Protocol.pdb
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\obj\Debug\netcoreapp3.1\Protocol.GeneratedMSBuildEditorConfig.editorconfig
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\obj\Debug\netcoreapp3.1\Protocol.AssemblyInfoInputs.cache
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\obj\Debug\netcoreapp3.1\Protocol.AssemblyInfo.cs
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\obj\Debug\netcoreapp3.1\Protocol.csproj.CoreCompileInputs.cache
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\obj\Debug\netcoreapp3.1\Protocol.dll
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\obj\Debug\netcoreapp3.1\Protocol.pdb

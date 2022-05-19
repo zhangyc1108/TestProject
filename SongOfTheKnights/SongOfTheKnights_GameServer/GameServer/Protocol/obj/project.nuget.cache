@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6nttIx8hrsJK9hUGEVd/7AapoYB2uaGUnGlzdd94hwSCLu1tDWCyTbQUseUDHsK4vlWi4s+NgWTpoppcooL3fQ==",
+  "success": true,
+  "projectFilePath": "D:\\Progress\\TestProject\\SongOfTheKnights\\SongOfTheKnights_GameServer\\GameServer\\Protocol\\Protocol.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\14222\\.nuget\\packages\\google.protobuf\\3.19.0\\google.protobuf.3.19.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

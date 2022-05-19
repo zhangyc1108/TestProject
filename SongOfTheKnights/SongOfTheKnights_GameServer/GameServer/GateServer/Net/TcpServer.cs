@@ -3,88 +3,87 @@ using DotNetty.Handlers.Timeout;
 using DotNetty.Transport.Bootstrapping;
 using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
+using Orleans;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GateServer.Net
 {
-    public static class TcpServer
+    public class TcpServer
     {
-        /// <summary>
-        /// 启动TcpServer
-        /// </summary>
-        /// <param name="port"></param>
-        /// <returns></returns>
-        public static Task Start(int port)
+        private IEventLoopGroup bossGroup;
+
+        private IEventLoopGroup workerGroup;
+
+        private IChannel bootstrapChannel;
+
+        private readonly IClusterClient client;
+
+        public TcpServer(IClusterClient client)
         {
-            return RunServerAsync(port);
+            this.client = client;
         }
 
-        /// <summary>
-        /// 关闭TcpServer
-        /// </summary>
-        /// <returns></returns>
-        public static async Task Stop()
+        public async Task StartAsync()
         {
-            await Task.WhenAll(
-                bootstrapChannel.CloseAsync(),
-                bossGroup.ShutdownGracefullyAsync(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(2)),
-                workerGroup.ShutdownGracefullyAsync(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(2))
-            );
-
-            Console.WriteLine("关闭网关服务器成功！");
-        }
-
-        private static async Task RunServerAsync(int port)
-        {
+            // 主工作组
             bossGroup = new MultithreadEventLoopGroup(1);
 
-            // 默认是 CPU核数 * 2
+            // 子工作组 默认是 CPU核数 * 2
 
             workerGroup = new MultithreadEventLoopGroup();
 
-            try
-            {
-                ServerBootstrap bootstrap = new ServerBootstrap();
+            ServerBootstrap bootstrap = new ServerBootstrap();
 
-                bootstrap.Group(bossGroup, workerGroup);
+            // 设置线程组模型为：主从线程模型
 
-                bootstrap.Channel<TcpServerSocketChannel>();
+            bootstrap.Group(bossGroup, workerGroup);
 
-                bootstrap
-                    .Option(ChannelOption.SoBacklog, 65535)
-                    .Option(ChannelOption.RcvbufAllocator, new AdaptiveRecvByteBufAllocator())
-                    .Option(ChannelOption.Allocator, PooledByteBufferAllocator.Default)
-                    .ChildOption(ChannelOption.Allocator, PooledByteBufferAllocator.Default)
-                    .ChildOption(ChannelOption.SoKeepalive, true)
-                    .ChildOption(ChannelOption.TcpNodelay, true)
-                    .ChildHandler(new ActionChannelInitializer<IChannel>(channel =>
-                    {
-                        IChannelPipeline pipeline = channel.Pipeline;
+            // 设置通道类型
 
-                        pipeline.AddLast("IdleChecker", new IdleStateHandler(50, 50, 0));
+            bootstrap.Channel<TcpServerSocketChannel>();
 
-                        pipeline.AddLast(new TcpServerEncoder(), new TcpServerDecoder(), new TcpServerHandler());
-                    }));
+            bootstrap
+                // 半连接队列的元素上限 也就是说已经在操作系统层面完成了3次握手，等待当前进程取走的链路的个数
+                .Option(ChannelOption.SoBacklog, 4096)
+                // 用于设置Channel接收字节流时的缓冲区大小
+                .Option(ChannelOption.RcvbufAllocator, new AdaptiveRecvByteBufAllocator())
+                // 用于设置重用缓冲区
+                .Option(ChannelOption.Allocator, PooledByteBufferAllocator.Default)
+                .ChildOption(ChannelOption.Allocator, PooledByteBufferAllocator.Default)
+                // 保持长连接
+                .ChildOption(ChannelOption.SoKeepalive, true)
+                // 取消延迟发送 也就是关闭Nagle算法
+                .ChildOption(ChannelOption.TcpNodelay, true)
+                // 用于对单个通道的数据处理
+                .ChildHandler(new ActionChannelInitializer<IChannel>(channel =>
+                {
+                    IChannelPipeline pipeline = channel.Pipeline;
 
-                bootstrapChannel = await bootstrap.BindAsync(port);
+                    pipeline.AddLast("IdleChecker", new IdleStateHandler(50, 50, 0));
 
-                Console.WriteLine($"启动网关服务器成功！监听端口号：{port}");
-            }
-            catch (Exception e)
-            {
-                Console.Error.WriteLine(e.Message);
+                    pipeline.AddLast(new TcpServerEncoder(), new TcpServerDecoder(), new TcpServerHandler(client));
+                }));
 
-                throw new Exception("启动 TcpServer 失败! \n" + e.StackTrace);
-            }
+            bootstrapChannel = await bootstrap.BindAsync(8899);
+
+            Console.WriteLine($"启动网关服务器成功！监听端口号：{8899}");
         }
 
-        private static IEventLoopGroup bossGroup;
+        public async Task StopAsync()
+        {
+            try
+            {
+                await bootstrapChannel.CloseAsync();
+            }
+            finally
+            {
+                await Task.WhenAll(
+                    bossGroup.ShutdownGracefullyAsync(TimeSpan.FromMilliseconds(100), TimeSpan.FromSeconds(1)),
+                    workerGroup.ShutdownGracefullyAsync(TimeSpan.FromMilliseconds(100), TimeSpan.FromSeconds(1)));
 
-        private static IEventLoopGroup workerGroup;
-
-        private static IChannel bootstrapChannel;
+                Console.WriteLine("关闭网关服务器成功！");
+            }
+        }
     }
 }

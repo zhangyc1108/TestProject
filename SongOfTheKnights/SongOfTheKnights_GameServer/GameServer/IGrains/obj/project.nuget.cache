@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "pboNhu8bTR8Mndz9rczzjsWFdlST0FD/c5jgMJKa0//Wu9nl0o6QwaBrlpPekJ1n3Wn6qgngshokH73UNxjONA==",
+  "success": true,
+  "projectFilePath": "D:\\Progress\\TestProject\\SongOfTheKnights\\SongOfTheKnights_GameServer\\GameServer\\IGrains\\IGrains.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.orleans.codegenerator.msbuild\\3.5.0\\microsoft.orleans.codegenerator.msbuild.3.5.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.orleans.core.abstractions\\3.5.0\\microsoft.orleans.core.abstractions.3.5.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,11 @@
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\bin\Debug\netcoreapp3.1\IGrains.deps.json
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\bin\Debug\netcoreapp3.1\IGrains.dll
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\bin\Debug\netcoreapp3.1\IGrains.pdb
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.orleans.g.args.txt
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.orleans.g.cs
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.GeneratedMSBuildEditorConfig.editorconfig
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.AssemblyInfoInputs.cache
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.AssemblyInfo.cs
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.csproj.CoreCompileInputs.cache
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.dll
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.pdb

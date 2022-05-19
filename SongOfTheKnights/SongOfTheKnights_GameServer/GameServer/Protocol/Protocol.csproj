@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.19.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="PB\" />
+  </ItemGroup>
+
+</Project>

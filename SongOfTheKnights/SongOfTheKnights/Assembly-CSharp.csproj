@@ -121,14 +121,17 @@
     <Compile Include="Assets\XLuaFramework\Scripts\MainTest.cs" />
     <Compile Include="Assets\XLuaFramework\External\AsyncAwaitUtil\Source\WaitForUpdate.cs" />
     <Compile Include="Assets\XLuaFramework\Scripts\AssetLoader.cs" />
+    <Compile Include="Assets\XLuaFramework\Scripts\TCPClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\XLuaFramework\External\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
     <None Include="Assets\XLuaFramework\External\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
     <None Include="Assets\GAssets\Launch\Src\Main.lua.txt" />
     <None Include="Assets\GAssets\Launch\Src\TestTable.lua.txt" />
+    <None Include="Assets\XLuaFramework\External\UniRx\ReadMe.txt" />
     <None Include="Assets\XLuaFramework\External\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
     <None Include="Assets\XLuaFramework\External\XLua\Resources\xlua\util.lua.txt" />
+    <None Include="Assets\GAssets\Launch\Res\Proto\LaunchPB.proto.txt" />
     <None Include="Assets\XLuaFramework\External\Newtonsoft.Json.dll" />
     <None Include="Assets\XLuaFramework\External\Plugins\WSA\x64\xlua.dll" />
     <None Include="Assets\XLuaFramework\External\XLua\Resources\perf\profiler.lua.txt" />
@@ -762,6 +765,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{FBC71B3F-DD68-98C2-365B-B2B125A54F8D}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

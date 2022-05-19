@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using XLua;
 using UnityEngine.Networking;
+using UniRx;
 
 /// <summary>
 /// MonoBehaviour的代理类
@@ -47,6 +48,15 @@ public class MonoProxy : MonoBehaviour
         luaTable.Get("OnDestroy", out luaOnDestroy);
 
         return luaTable;
+    }
+
+    /// <summary>
+    /// 给MonoProxy对应的Lua脚本绑定一个Update方法！按需使用！
+    /// </summary>
+    /// <param name="action"></param>
+    public void BindUpdate(Action action)
+    {
+        Observable.EveryUpdate().Subscribe(_ => { action(); }).AddTo(this);
     }
 
     void Start()
