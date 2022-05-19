@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "6mF2lBIMh3DHNzl+Uu3yxH94Y2aMmezboOiCjg80NlEr2PaQQO8jzIP0q8gsodBjxYSeTtnsUNnLlQDfJ39vDw==",
+  "success": true,
+  "projectFilePath": "D:\\Progress\\TestProject\\SongOfTheKnights\\SongOfTheKnights_GameServer\\GameServer\\GateServer\\GateServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\14222\\.nuget\\packages\\dotnetty.buffers\\0.7.0\\dotnetty.buffers.0.7.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\dotnetty.codecs\\0.7.0\\dotnetty.codecs.0.7.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\dotnetty.common\\0.7.0\\dotnetty.common.0.7.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\dotnetty.handlers\\0.7.0\\dotnetty.handlers.0.7.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\dotnetty.transport\\0.7.0\\dotnetty.transport.0.7.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\14222\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
