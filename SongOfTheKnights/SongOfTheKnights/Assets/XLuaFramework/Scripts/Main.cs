@@ -13,7 +13,7 @@ public class Main : MonoBehaviour
         {
             moduleName = "Launch",
             moduleVersion = "20211008085930",
-            moduleUrl = "http://192.168.0.7:8000"
+            moduleUrl = "http://192.168.0.107:8000/"
         };
 
         bool result = await ModuleManager.Instance.Load(launchModule);
