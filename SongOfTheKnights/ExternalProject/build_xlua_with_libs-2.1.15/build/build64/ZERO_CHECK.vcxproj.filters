@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Progress\TestProject\SongOfTheKnights\ExternalProject\build_xlua_with_libs-2.1.15\build\build64\CMakeFiles\f63b042b1f6fd7df557931fa7b1c29c2\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{11B0C962-2E25-3B75-A70B-47B4C49E14FE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

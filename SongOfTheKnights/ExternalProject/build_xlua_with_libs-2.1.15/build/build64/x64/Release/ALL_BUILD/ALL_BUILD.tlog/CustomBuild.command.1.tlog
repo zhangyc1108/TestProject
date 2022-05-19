@@ -1,0 +1,10 @@
+^D:\PROGRESS\TESTPROJECT\SONGOFTHEKNIGHTS\EXTERNALPROJECT\BUILD_XLUA_WITH_LIBS-2.1.15\BUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Progress/TestProject/SongOfTheKnights/ExternalProject/build_xlua_with_libs-2.1.15/build -BD:/Progress/TestProject/SongOfTheKnights/ExternalProject/build_xlua_with_libs-2.1.15/build/build64 --check-stamp-file D:/Progress/TestProject/SongOfTheKnights/ExternalProject/build_xlua_with_libs-2.1.15/build/build64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
