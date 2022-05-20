@@ -1,4 +1,5 @@
-﻿using Orleans;
+﻿using Common;
+using Orleans;
 using Orleans.Configuration;
 using Orleans.Hosting;
 using System;
@@ -11,9 +12,11 @@ namespace CardServer
     {
         static async Task Main(string[] args)
         {
+            Logger.Create("CardServer");
+
             await StartSilo();
 
-            Console.WriteLine("开启CardServer！");
+            Logger.Instance.Information("开启CardServer！");
 
             Console.ReadLine();
         }

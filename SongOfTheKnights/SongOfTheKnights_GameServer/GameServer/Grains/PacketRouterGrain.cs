@@ -2,12 +2,18 @@
 using System;
 using System.Threading.Tasks;
 using Google.Protobuf;
+using Common;
 
-namespace Grains
+namespace IGrains
 {
     public class PacketRouterGrain : Orleans.Grain, IPacketRouterGrain
     {
         private IPacketObserver observer;
+
+        /// <summary>
+        /// 记录此Grain对应的玩家是否在线
+        /// </summary>
+        public bool onLine { get; set; }
 
         /// <summary>
         /// 当CardServer收到来自GateServer的消息
@@ -16,13 +22,7 @@ namespace Grains
         /// <returns></returns>
         public Task OnReceivePacket(NetPackage netPackage)
         {
-            // 当前Grain的key
-
-            long id = GrainReference.GrainIdentity.PrimaryKeyLong;
-
-            Console.WriteLine($"CardServer {id} 收到NetPackage");
-
-            // 将消息再发回客户端
+            // 测试协议
 
             if (netPackage.protoID == (int)LaunchPB.ProtoCode.EHero)
             {
@@ -39,8 +39,6 @@ namespace Grains
                 // 将数据包再发回到网关服务器
 
                 observer.OnReceivePacket(netPackage);
-
-                Console.WriteLine($"CardServer {id} 发送NetPackage");
             }
 
             return Task.CompletedTask;
@@ -49,6 +47,28 @@ namespace Grains
         public Task BindPacketObserver(IPacketObserver observer)
         {
             this.observer = observer;
+
+            return Task.CompletedTask;
+        }
+
+        public Task OffLine()
+        {
+            onLine = false;
+
+            string account = GrainReference.GrainIdentity.PrimaryKeyString;
+
+            Logger.Instance.Information($"{account} 下线");
+
+            return Task.CompletedTask;
+        }
+
+        public Task OnLine()
+        {
+            onLine = true;
+
+            string account = GrainReference.GrainIdentity.PrimaryKeyString;
+
+            Logger.Instance.Information($"{account} 上线");
 
             return Task.CompletedTask;
         }

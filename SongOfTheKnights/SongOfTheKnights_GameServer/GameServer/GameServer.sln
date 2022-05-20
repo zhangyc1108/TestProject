@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GateServer", "GateServer\GateServer.csproj", "{F32FFC93-6AD0-4067-97A9-3ED0B8EAC562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GateServer", "GateServer\GateServer.csproj", "{F32FFC93-6AD0-4067-97A9-3ED0B8EAC562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardServer", "CardServer\CardServer.csproj", "{41A40206-03D0-4948-BB32-30EF54908E39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardServer", "CardServer\CardServer.csproj", "{41A40206-03D0-4948-BB32-30EF54908E39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGrains", "IGrains\IGrains.csproj", "{5CF7A651-8E9E-47CC-993E-E2A82EE14CC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IGrains", "IGrains\IGrains.csproj", "{5CF7A651-8E9E-47CC-993E-E2A82EE14CC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grains", "Grains\Grains.csproj", "{804705BE-C6AF-47AA-BF83-1D8EC718B53B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grains", "Grains\Grains.csproj", "{804705BE-C6AF-47AA-BF83-1D8EC718B53B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protocol", "Protocol\Protocol.csproj", "{EDBDCC5E-3D96-4999-9F19-DE658693F95D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Protocol", "Protocol\Protocol.csproj", "{EDBDCC5E-3D96-4999-9F19-DE658693F95D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{FCB352EC-4E43-4094-BD86-86B931957FD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{EDBDCC5E-3D96-4999-9F19-DE658693F95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDBDCC5E-3D96-4999-9F19-DE658693F95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDBDCC5E-3D96-4999-9F19-DE658693F95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB352EC-4E43-4094-BD86-86B931957FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB352EC-4E43-4094-BD86-86B931957FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB352EC-4E43-4094-BD86-86B931957FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB352EC-4E43-4094-BD86-86B931957FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

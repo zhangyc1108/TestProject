@@ -1,4 +1,5 @@
-﻿using DotNetty.Transport.Channels;
+﻿using Common;
+using DotNetty.Transport.Channels;
 using IGrains;
 using Orleans;
 using System;
@@ -14,47 +15,41 @@ namespace GateServer.Net
     {
         private readonly IClusterClient client;
 
-        private IPacketRouterGrain routerGrain;
-
-        private PacketObserver packetObserver;
+        private Session session;
 
         public TcpServerHandler(IClusterClient client)
         {
             this.client = client;
         }
 
-        protected override void ChannelRead0(IChannelHandlerContext context, NetPackage netPackage)
+        protected override async void ChannelRead0(IChannelHandlerContext context, NetPackage netPackage)
         {
-            routerGrain.OnReceivePacket(netPackage);
+            await session.DispatchReceivePacket(netPackage);
         }
 
         public override void ChannelActive(IChannelHandlerContext context)
         {
             base.ChannelActive(context);
 
-            routerGrain = client.GetGrain<IPacketRouterGrain>(123);
+            session = new Session(client, context);
 
-            packetObserver = new PacketObserver(context);
-
-            IPacketObserver observerRef = client.CreateObjectReference<IPacketObserver>(packetObserver).Result;
-
-            routerGrain.BindPacketObserver(observerRef).Wait();
-
-            Console.WriteLine($"{context.Channel.RemoteAddress.ToString()} 链接成功！");
+            Logger.Instance.Information($"{context.Channel.RemoteAddress.ToString()} 链接成功！");
         }
 
         public override void ChannelInactive(IChannelHandlerContext context)
         {
             base.ChannelInactive(context);
 
-            Console.WriteLine($"{context.Channel.RemoteAddress.ToString()} 链接断开！");
+            session.Disconnect();
+
+            Logger.Instance.Information($"{context.Channel.RemoteAddress.ToString()} 链接断开！");
         }
 
         public override void ExceptionCaught(IChannelHandlerContext context, Exception exception)
         {
             base.ExceptionCaught(context, exception);
 
-            Console.WriteLine($"{context.Channel.RemoteAddress.ToString()} 链接异常 {exception}！");
+            Logger.Instance.Information($"{context.Channel.RemoteAddress.ToString()} 链接异常 {exception}！");
         }
     }
 }

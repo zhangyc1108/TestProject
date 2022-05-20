@@ -9,3 +9,4 @@ D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\
 D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.csproj.CoreCompileInputs.cache
 D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.dll
 D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.pdb
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.csproj.AssemblyReference.cache

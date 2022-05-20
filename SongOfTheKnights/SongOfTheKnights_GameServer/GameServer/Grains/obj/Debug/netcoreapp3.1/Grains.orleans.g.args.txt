@@ -5,17 +5,29 @@ AssemblyName:Grains
 OutputType:Library
 TargetPath:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\bin\Debug\netcoreapp3.1\Grains.dll
 CodeGenOutputFile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\obj\Debug\netcoreapp3.1\Grains.orleans.g.cs
+Compile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\LoginGrain.cs
 Compile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\PacketRouterGrain.cs
+Reference:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Common\bin\Debug\netcoreapp3.1\Common.dll
+Reference:C:\Users\14222\.nuget\packages\dnsclient\1.6.0\lib\netstandard2.1\DnsClient.dll
 Reference:C:\Users\14222\.nuget\packages\google.protobuf\3.19.0\lib\netstandard2.0\Google.Protobuf.dll
 Reference:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\bin\Debug\netcoreapp3.1\IGrains.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\Microsoft.CSharp.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\Microsoft.VisualBasic.Core.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\Microsoft.VisualBasic.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\Microsoft.Win32.Primitives.dll
+Reference:C:\Users\14222\.nuget\packages\microsoft.win32.registry\5.0.0\ref\netstandard2.0\Microsoft.Win32.Registry.dll
+Reference:C:\Users\14222\.nuget\packages\mongodb.bson\2.15.1\lib\netstandard2.1\MongoDB.Bson.dll
+Reference:C:\Users\14222\.nuget\packages\mongodb.driver.core\2.15.1\lib\netstandard2.1\MongoDB.Driver.Core.dll
+Reference:C:\Users\14222\.nuget\packages\mongodb.driver\2.15.1\lib\netstandard2.1\MongoDB.Driver.dll
+Reference:C:\Users\14222\.nuget\packages\mongodb.libmongocrypt\1.3.0\lib\netstandard2.1\MongoDB.Libmongocrypt.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\mscorlib.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\netstandard.dll
 Reference:C:\Users\14222\.nuget\packages\microsoft.orleans.core.abstractions\3.5.0\lib\netstandard2.0\Orleans.Core.Abstractions.dll
 Reference:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Protocol\bin\Debug\netcoreapp3.1\Protocol.dll
+Reference:C:\Users\14222\.nuget\packages\serilog\2.10.0\lib\netstandard2.1\Serilog.dll
+Reference:C:\Users\14222\.nuget\packages\serilog.sinks.console\3.1.1\lib\netcoreapp1.1\Serilog.Sinks.Console.dll
+Reference:C:\Users\14222\.nuget\packages\serilog.sinks.file\4.1.0\lib\netstandard2.0\Serilog.Sinks.File.dll
+Reference:C:\Users\14222\.nuget\packages\sharpcompress\0.30.1\lib\netcoreapp3.1\SharpCompress.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.AppContext.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Buffers.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Collections.Concurrent.dll
@@ -102,7 +114,7 @@ Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netc
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Resources.Reader.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Resources.ResourceManager.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Resources.Writer.dll
-Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+Reference:C:\Users\14222\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\ref\netstandard2.1\System.Runtime.CompilerServices.Unsafe.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Runtime.CompilerServices.VisualC.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Runtime.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Runtime.Extensions.dll
@@ -118,6 +130,7 @@ Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netc
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Runtime.Serialization.Json.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Runtime.Serialization.Primitives.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Runtime.Serialization.Xml.dll
+Reference:C:\Users\14222\.nuget\packages\system.security.accesscontrol\5.0.0\ref\netstandard2.0\System.Security.AccessControl.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Security.Claims.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Security.Cryptography.Algorithms.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Security.Cryptography.Csp.dll
@@ -126,6 +139,7 @@ Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netc
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Security.Cryptography.X509Certificates.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Security.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Security.Principal.dll
+Reference:C:\Users\14222\.nuget\packages\system.security.principal.windows\5.0.0\ref\netcoreapp3.0\System.Security.Principal.Windows.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Security.SecureString.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.ServiceModel.Web.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.ServiceProcess.dll
@@ -162,4 +176,4 @@ Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netc
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Xml.XPath.XDocument.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\WindowsBase.dll
 DefineConstants:TRACE,DEBUG,NETCOREAPP,NETCOREAPP3_1,
-InputHash:0a7f17f3a4047fdb70e8d9fec701794241a456d3
+InputHash:c9246a36976f1920c097c06086ae91330c28b0d2

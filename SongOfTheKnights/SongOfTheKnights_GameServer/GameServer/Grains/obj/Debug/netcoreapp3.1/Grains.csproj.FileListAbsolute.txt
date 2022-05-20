@@ -15,3 +15,5 @@ D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\
 D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\bin\Debug\netcoreapp3.1\IGrains.pdb
 D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\bin\Debug\netcoreapp3.1\Protocol.pdb
 D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\obj\Debug\netcoreapp3.1\Grains.csproj.CopyComplete
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\bin\Debug\netcoreapp3.1\Common.dll
+D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\Grains\bin\Debug\netcoreapp3.1\Common.pdb

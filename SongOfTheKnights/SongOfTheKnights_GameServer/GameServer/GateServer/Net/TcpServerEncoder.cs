@@ -1,4 +1,5 @@
-﻿using DotNetty.Buffers;
+﻿using Common;
+using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using Google.Protobuf;
@@ -23,7 +24,7 @@ namespace GateServer.Net
 
             output.WriteBytes(netPackage.bodyData);
 
-            Console.WriteLine($"{context.Channel.RemoteAddress.ToString()} 发送协议号 {netPackage.protoID} 数据！");
+            //Logger.Instance.Information($"{context.Channel.RemoteAddress.ToString()} 发送协议号 {netPackage.protoID} 数据！");
         }
     }
 }
