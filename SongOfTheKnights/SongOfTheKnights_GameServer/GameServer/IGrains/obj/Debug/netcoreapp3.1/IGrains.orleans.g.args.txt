@@ -5,6 +5,7 @@ AssemblyName:IGrains
 OutputType:Library
 TargetPath:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\bin\Debug\netcoreapp3.1\IGrains.dll
 CodeGenOutputFile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\obj\Debug\netcoreapp3.1\IGrains.orleans.g.cs
+Compile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\ILoginGrain.cs
 Compile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\IPacketObserver.cs
 Compile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\IPacketRouterGrain.cs
 Compile:D:\Progress\TestProject\SongOfTheKnights\SongOfTheKnights_GameServer\GameServer\IGrains\NetPackage.cs
@@ -161,4 +162,4 @@ Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netc
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\System.Xml.XPath.XDocument.dll
 Reference:C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1\WindowsBase.dll
 DefineConstants:TRACE,DEBUG,NETCOREAPP,NETCOREAPP3_1,
-InputHash:15e09d8e1edef386a1a148495960c92d5d761041
+InputHash:727711abc0a6f4a3245ab0bb815fd391cd0037b5

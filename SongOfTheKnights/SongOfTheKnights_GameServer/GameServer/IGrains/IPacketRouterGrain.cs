@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace IGrains
 {
-    public interface IPacketRouterGrain : IGrainWithIntegerKey
+    public interface IPacketRouterGrain : IGrainWithStringKey
     {
         /// <summary>
         /// 当CardServer收到来自GateServer的消息
@@ -19,5 +19,17 @@ namespace IGrains
         /// <param name="observer"></param>
         /// <returns></returns>
         Task BindPacketObserver(IPacketObserver observer);
+
+        /// <summary>
+        /// 网关通知：当前Grain对应的玩家上线了
+        /// </summary>
+        /// <returns></returns>
+        Task OnLine();
+
+        /// <summary>
+        /// 网关通知：当前Grain对应的玩家掉线了
+        /// </summary>
+        /// <returns></returns>
+        Task OffLine();
     }
 }

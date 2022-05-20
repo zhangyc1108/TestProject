@@ -6,6 +6,7 @@ using DotNetty.Transport.Channels.Sockets;
 using Orleans;
 using System;
 using System.Threading.Tasks;
+using Common;
 
 namespace GateServer.Net
 {
@@ -67,7 +68,7 @@ namespace GateServer.Net
 
             bootstrapChannel = await bootstrap.BindAsync(8899);
 
-            Console.WriteLine($"启动网关服务器成功！监听端口号：{8899}");
+            Logger.Instance.Information($"启动网关服务器成功！监听端口号：{8899}");
         }
 
         public async Task StopAsync()
@@ -82,7 +83,7 @@ namespace GateServer.Net
                     bossGroup.ShutdownGracefullyAsync(TimeSpan.FromMilliseconds(100), TimeSpan.FromSeconds(1)),
                     workerGroup.ShutdownGracefullyAsync(TimeSpan.FromMilliseconds(100), TimeSpan.FromSeconds(1)));
 
-                Console.WriteLine("关闭网关服务器成功！");
+                Logger.Instance.Information("关闭网关服务器成功！");
             }
         }
     }

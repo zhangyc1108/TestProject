@@ -1,4 +1,5 @@
-﻿using DotNetty.Buffers;
+﻿using Common;
+using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using Google.Protobuf;
@@ -74,7 +75,7 @@ namespace GateServer.Net
             }
             catch (Exception e)
             {
-                Console.Error.WriteLine("解析数据异常," + e.Message + "\n" + e.StackTrace);
+                Logger.Instance.Error("解析数据异常," + e.Message + "\n" + e.StackTrace);
             }
         }
     }
