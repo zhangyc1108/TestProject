@@ -303,7 +303,7 @@ public class Downloader : Singleton<Downloader>
 
         List<BundleInfo> bundleList = new List<BundleInfo>();
 
-        // 记录需要删除的本地bundle文件列表
+        // 记录本地已经存在的bundle文件列表
 
         Dictionary<string, BundleInfo> localBundleDic = new Dictionary<string, BundleInfo>();
 
@@ -317,8 +317,7 @@ public class Downloader : Singleton<Downloader>
             }
         }
 
-        // 1. 找到那些差异的bundle文件，放到bundleList容器中
-        // 2. 对于那些遗留在本地的无用的bundle文件，把它过滤在localBundleDic容器里
+        // 1. 找到那些压迫下载的差异bundle文件，放到bundleList容器中
 
         foreach (BundleInfo bundleInfo in serverConfig.BundleArray.Values)
         {
@@ -328,19 +327,26 @@ public class Downloader : Singleton<Downloader>
             {
                 bundleList.Add(bundleInfo);
             }
-            else
+        }
+
+        // 2. 对于那些遗留在本地的多出来的bundle文件，把它过滤在removeList容器里
+
+        List<BundleInfo> removeList = new List<BundleInfo>();
+
+        if (localConfig != null)
+        {
+            foreach (var localBundle in localConfig.BundleArray)
             {
-                localBundleDic.Remove(uniqueId);
+                if (serverConfig.BundleArray.ContainsKey(localBundle.Key) == false)
+                {
+                    removeList.Add(localBundle.Value);
+                }
             }
         }
 
-        // 对于那些遗留在本地的无用的bundle文件，要清除，不然本地文件越积累越多
-
-        BundleInfo[] removeList = localBundleDic.Values.ToArray();
-
         // 返回 需要下载的Bundle列表和需要删除的本地Bundle数组
 
-        return new Tuple<List<BundleInfo>, BundleInfo[]>(bundleList, removeList);
+        return new Tuple<List<BundleInfo>, BundleInfo[]>(bundleList, removeList.ToArray());
     }
 
     /// <summary>
